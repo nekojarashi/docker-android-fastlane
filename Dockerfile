@@ -21,7 +21,7 @@ RUN wget --quiet --output-document=android-sdk.zip ${ANDROID_SDK_URL} \
   # Install Fastlane
   && apt-get update && apt-get install --no-install-recommends -y --allow-unauthenticated build-essential git ruby2.5-dev \
   && gem install fastlane -v "2.144.0" --no-document \
-  && gem install bundler -​-no-document \
+  && gem install bundler --no-document \
   # Clean up
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
   && apt-get autoremove -y && apt-get clean
