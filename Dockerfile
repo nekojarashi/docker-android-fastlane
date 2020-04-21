@@ -19,8 +19,7 @@ RUN wget --quiet --output-document=android-sdk.zip ${ANDROID_SDK_URL} \
   && yes | sdkmanager "extras;google;m2repository" \
   && yes | sdkmanager --licenses \
   # Install Fastlane
-  && apt-get update && apt-get install --no-install-recommends -y --allow-unauthenticated \
-  && build-essential git ruby2.5-dev \
+  && apt-get update && apt-get install --no-install-recommends -y --allow-unauthenticated build-essential git ruby2.5-dev \
   && gem install fastlane -v "2.144.0" -​-no-document \
   && gem install bundler -​-no-document \
   # Clean up
