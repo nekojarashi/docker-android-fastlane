@@ -17,6 +17,7 @@ RUN wget --quiet --output-document=android-sdk.zip ${ANDROID_SDK_URL} \
   && yes | sdkmanager "extras;android;m2repository" \
   && yes | sdkmanager "extras;google;google_play_services" \
   && yes | sdkmanager "extras;google;m2repository" \
+  && yes | sdkmanager "ndk;21.0.6113669" \
   && yes | sdkmanager --licenses \
   # Install Fastlane
   && apt-get update && apt-get install --no-install-recommends -y --allow-unauthenticated build-essential git ruby2.5-dev \
